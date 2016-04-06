@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<anttasks:AntTask xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:anttasks="http://org.eclipse.fx.ide.jdt/1.0" buildDirectory="${project}/build">
+  <deploy height="500" width="500" packagingFormat="none">
+    <application name="Soundboard" mainclass="omega.soundboard.App" version="0.9" toolkit="fx"/>
+    <info title="Soundboard" vendor="Carlo Morgenstern"/>
+  </deploy>
+  <signjar/>
+</anttasks:AntTask>

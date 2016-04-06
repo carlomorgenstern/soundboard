@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="omega.soundboard.UIController">
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="Buttonzahl">
+					<items>
+						<RadioMenuItem mnemonicParsing="false" text="1"
+							userData="1">
+							<toggleGroup>
+								<ToggleGroup fx:id="buttonCountToggleGroup" />
+							</toggleGroup>
+						</RadioMenuItem>
+						<RadioMenuItem mnemonicParsing="false" text="4"
+							toggleGroup="$buttonCountToggleGroup" userData="4" />
+						<RadioMenuItem mnemonicParsing="false" text="9"
+							toggleGroup="$buttonCountToggleGroup" userData="9" />
+						<RadioMenuItem mnemonicParsing="false" text="16"
+							toggleGroup="$buttonCountToggleGroup" userData="16" />
+						<RadioMenuItem mnemonicParsing="false"
+							onAction="#openCustomCountDialog" text="Benutzerdefiniert..."
+							toggleGroup="$buttonCountToggleGroup" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Spaltenzahl">
+					<items>
+						<RadioMenuItem mnemonicParsing="false" text="1"
+							userData="1">
+							<toggleGroup>
+								<ToggleGroup fx:id="columnCountToggleGroup" />
+							</toggleGroup>
+						</RadioMenuItem>
+						<RadioMenuItem mnemonicParsing="false" text="2"
+							toggleGroup="$columnCountToggleGroup" userData="2" />
+						<RadioMenuItem mnemonicParsing="false" text="3"
+							toggleGroup="$columnCountToggleGroup" userData="3" />
+						<RadioMenuItem mnemonicParsing="false" text="4"
+							toggleGroup="$columnCountToggleGroup" userData="4" />
+						<RadioMenuItem mnemonicParsing="false"
+							onAction="#openCustomCountDialog" text="Benutzerdefiniert..."
+							toggleGroup="$columnCountToggleGroup" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="?">
+					<items>
+						<MenuItem mnemonicParsing="false" text="Version: 1.0.1" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+	<center>
+		<GridPane fx:id="buttonPane" hgap="10.0" vgap="10.0"
+			BorderPane.alignment="CENTER">
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+		</GridPane>
+	</center>
+</BorderPane>
